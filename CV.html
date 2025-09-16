@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Özgeçmiş - Yazılım Geliştirici</title>
+  <style>
+    /* Genel Stil */
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+
+    /* Başlık Stilleri */
+    h1 {
+      color: #2c3e50;
+      text-align: center;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 10px;
+      margin-bottom: 25px;
+    }
+
+    h2 {
+      color: #2980b9;
+      border-left: 4px solid #3498db;
+      padding-left: 10px;
+      margin-top: 25px;
+    }
+
+    h3 {
+      color: #2c3e50;
+      margin-bottom: 5px;
+    }
+
+    /* Bölüm Stilleri */
+    .section {
+      background-color: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Kişisel Bilgiler */
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 15px;
+    }
+
+    /* İş Deneyimi */
+    .experience {
+      margin-bottom: 15px;
+    }
+
+    .company {
+      font-weight: bold;
+      color: #2c3e50;
+    }
+
+    .date {
+      color: #7f8c8d;
+      font-style: italic;
+    }
+
+    /* Yetenekler Grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 10px;
+      margin-top: 15px;
+    }
+
+    .skill-category {
+      margin-bottom: 15px;
+    }
+
+    .skill-category h4 {
+      margin-bottom: 5px;
+      color: #2980b9;
+    }
+
+    /* Listeler */
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 5px;
+    }
+
+    /* İletişim Bilgileri */
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    /* Yazdırma Stili */
+    @media print {
+      body {
+        background-color: white;
+        padding: 0;
+      }
+
+      .section {
+        box-shadow: none;
+        border: 1px solid #ddd;
+      }
+
+      .no-print {
+        display: none;
+      }
+    }
+
+    /* [YENİ] Başlık ve Fotoğraf Bölümü */
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 25px;
+      flex-wrap: wrap;
+    }
+
+    .title-section {
+      flex: 2;
+      min-width: 300px;
+    }
+
+    .photo-container {
+      flex: 1;
+      text-align: right;
+      min-width: 150px;
+    }
+
+    .profile-photo {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #3498db;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* [YENİ] Mobil uyumluluk için */
+    @media (max-width: 768px) {
+      .header-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .photo-container {
+        text-align: center;
+        margin-top: 20px;
+        order: -1;
+        /* Fotoğrafı üstte gösterir */
+      }
+    }
+
+    @media print {
+
+      /* [YENİ] Yazdırma için fotoğraf stilleri */
+      .profile-photo {
+        border: 2px solid #ccc;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- [YENİ] Başlık ve Fotoğraf Konteyneri -->
+  <div class="header-container">
+    <div class="title-section">
+      <h1>SALİH ÜNAL</h1>
+      <!-- <h1>YAZILIM UZMANI</h1> -->
+      <!-- İletişim bilgileri buraya da taşınabilir, ben alt tarafta kalsın istiyorum -->
+    </div>
+
+    <div class="photo-container">
+      <!-- RESIM EKLEME YERI -->
+      <!-- "fotoğraf.jpg" yazan yere kendi fotoğrafınızın dosya adını yazın -->
+      <!-- Fotoğraf HTML ile aynı klasörde olmalı veya tam yolu belirtilmeli -->
+      <img src="benim.jpg" alt="[Salih Ünal] - Profil Fotoğrafı" class="profile-photo">
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Kişisel Bilgiler</h2>
+    <div class="contact-info">
+      <div class="contact-item">
+        <strong>Tel:</strong> 0 (537) 515 59 66
+      </div>
+      <div class="contact-item">
+        <strong>E-posta:</strong> salihunaldev@gmail.com
+      </div>
+      <div class="contact-item"><strong>Konum:</strong> İstanbul</div>
+      <div class="contact-item">
+        <strong>LinkedIn:</strong> linkedin.com/in/salih-%C3%BCnal-0948044a
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Profesyonel Özet</h2>
+    <p>
+      BT-Yazılım sektöründe 15 yılı aşkın süredir teknik destek, yardım masası
+      yönetimi, test otomasyonu ve full-stack geliştirme deneyimine sahip,
+      sonuç odaklı bir Yazılım Geliştirici ve Teknik Uzmanım. Kurumsal
+      projelerde SAP ERP ve JIRA yönetim sistemleri deneyimine sahibim.
+      Front-end ve Back-end teknolojilerinde yetkin olup, başta React olmak
+      üzere full-stack development alanında kariyerimi ilerletmek istiyorum.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>İş Deneyimi</h2>
+
+    <div class="experience">
+      <h3>Kıdemli Yazılım Uzmanı</h3>
+      <div class="company">42 Danışmanlık ve Bilişim A.Ş.</div>
+      <div class="date">Mayıs 2018 - Halen</div>
+      <ul>
+        <li>
+          Teknosa mağazalarında kullanılan mağazacılık çözüm yazılımı için
+          remote destek sağlama
+        </li>
+        <li>
+          Yazılım test (QA) süreçlerini yönetme ve test otomasyonu geliştirme
+        </li>
+        <li>Linux sunucu yönetimi ve PL/SQL veritabanı operasyonları</li>
+        <li>
+          Gereksinimlere uygun yazılım geliştirmeleri ve iyileştirmeler yapma
+        </li>
+      </ul>
+    </div>
+
+    <div class="experience">
+      <h3>Software Helpdesk Specialist</h3>
+      <div class="company">IBM Pos A.Ş.</div>
+      <div class="date">Mayıs 2015 - Mayıs 2018</div>
+      <ul>
+        <li>
+          IBM yazar kasaları ile ilgili mağazalarda yaşanan teknik sıkıntılara
+          destek sağlama
+        </li>
+        <li>
+          Yazılım ve donanım problemlerinin çözümü için müşteri ilişkileri
+          yönetimi
+        </li>
+        <li>SAP ERP entegrasyonlu süreçlerde teknik destek sağlama</li>
+      </ul>
+    </div>
+
+    <div class="experience">
+      <h3>Veri Giriş Uzmanı</h3>
+      <div class="company">Koton Mağazacılık</div>
+      <div class="date">Şubat 2014 - Mayıs 2015</div>
+      <ul>
+        <li>Depo ve mağaza envanter takip sistemlerinin yönetimi</li>
+        <li>Nakliye ve envanter verilerinin ERP sistemine işlenmesi</li>
+        <li>Veri bütünlüğü ve doğruluğunun kontrol edilmesi</li>
+      </ul>
+    </div>
+
+    <div class="experience">
+      <h3>Bilgi İşlem Uzmanı</h3>
+      <div class="company">Kardelen Yazılım</div>
+      <div class="date">Ağustos 2010 - Şubat 2014</div>
+      <ul>
+        <li>
+          Devlet hastanelerinde kullanılan hastane otomasyon yazılımlarına
+          destek sağlama
+        </li>
+        <li>Yazılım kurulumu, konfigürasyonu ve kullanıcı eğitimleri</li>
+        <li>
+          Sistem sorunlarının giderilmesi ve kullanıcı taleplerinin yönetimi
+        </li>
+      </ul>
+    </div>
+
+    <div class="experience">
+      <h3>Teknik Destek Elemanı</h3>
+      <div class="company">BSD Bilişim Sistemleri</div>
+      <div class="date">Ocak 2008 - Ağustos 2010</div>
+      <ul>
+        <li>
+          Bilgisayar ve elektronik ürün satış sonrası teknik destek sağlama
+        </li>
+        <li>Network ve server kurulumları ile bakım-onarım hizmetleri</li>
+        <li>Müşteri eğitimleri ve ürün tanıtımları</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Yetenekler</h2>
+    <div class="skills-grid">
+      <div class="skill-category">
+        <h4>Programlama Dilleri</h4>
+        <ul>
+          <li>JavaScript</li>
+          <li>HTML5</li>
+          <li>CSS</li>
+          <li>Java</li>
+          <li>PL/SQL</li>
+          <li>C#</li>
+        </ul>
+      </div>
+
+      <div class="skill-category">
+        <h4>Framework'ler & Kütüphaneler</h4>
+        <ul>
+          <li>React</li>
+          <li>Entity Framework</li>
+          <li>Node.js</li>
+        </ul>
+      </div>
+
+      <div class="skill-category">
+        <h4>Veritabanları</h4>
+        <ul>
+          <li>Oracle SQL</li>
+          <li>MySQL</li>
+          <li>SQL Server</li>
+        </ul>
+      </div>
+
+      <div class="skill-category">
+        <h4>Sistem & Araçlar</h4>
+        <ul>
+          <li>Linux Sunucu Yönetimi</li>
+          <li>Windows Server</li>
+          <li>Git</li>
+          <li>JIRA</li>
+          <li>SAP ERP</li>
+          <li>Docker</li>
+        </ul>
+      </div>
+
+      <div class="skill-category">
+        <h4>Diğer</h4>
+        <ul>
+          <li>API Geliştirme</li>
+          <li>Yazılım Testi (QA)</li>
+          <li>Network Yönetimi</li>
+          <li>Photoshop</li>
+          <li>MS Office</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Eğitim</h2>
+
+    <div class="experience">
+      <h3>Lise, Türkçe-Matematik</h3>
+      <div class="company">Ünraniye Lisesi</div>
+      <div class="date">2006 Mezunu</div>
+    </div>
+
+    <div class="experience">
+      <h3>Önlisans, Bilgisayar Teknolojisi ve Programlama</h3>
+      <div class="company">
+        Trakya Üniversitesi - Bilgisayar ve Teknoloji Yüksekokulu
+      </div>
+      <div class="date">2009 - 2013 | Not: 90/100</div>
+    </div>
+
+    <div class="experience">
+      <h3>Lisans, İşletme</h3>
+      <div class="company">Anadolu Üniversitesi - Açıköğretim Fakültesi</div>
+      <div class="date">2013 - 2018 | Not: 3.0/5.0</div>
+    </div>
+
+    <!-- <div class="experience">
+      <h3>Lisans, Felsefe</h3>
+      <div class="company">Anadolu Üniversitesi - Açıköğretim Fakültesi</div>
+      <div class="date">2020 - Devam Ediyor</div>
+    </div> -->
+  </div>
+
+  <div class="section">
+    <h2>Sertifikalar</h2>
+    <ul>
+      <li><strong>React İle Front-end </strong> - BTK Akademi</li>
+      <li>
+        <strong>İleri Seviye Oracle SQL Sertifikası</strong> - BTK Akademi
+      </li>
+      <li>
+        <strong>Programlama Dilleri Sertifikası</strong> - Edutime (Nisan
+        2008) - Css, HTML, JavaScript
+      </li>
+      <li>
+        <strong>İngilizce Dil Eğitim Sertifikası</strong> - İSMEK (Haziran
+        2007)
+      </li>
+      <li>
+        <strong>Bilgisayar Meslek Dalı Sertifikası</strong> - MEB (Ağustos
+        2005)
+      </li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Diller</h2>
+    <ul>
+      <li><strong>Türkçe:</strong> Ana Dil</li>
+      <li><strong>İngilizce:</strong> İleri Seviye</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Referanslar</h2>
+    <ul>
+      <strong>"Referanslar Talep Üzerine Verilecektir"</strong>
+
+    </ul>
+  </div>
+
+  <div class="section no-print">
+    <h2>CV'yi Yazdır</h2>
+    <p>
+      Bu CV'yi yazdırmak için tarayıcınızın yazdırma özelliğini
+      kullanabilirsiniz (Ctrl+P). Yazdırma önizlemesinde gereksiz öğeler
+      otomatik olarak gizlenecektir.
+    </p>
+    <button onclick="window.print()">CV'yi Yazdır</button>
+  </div>
+</body>
+
+</html>
